@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+ table{
+	border : 2px solid gray;
+	margin: 20px;
+	border-collapse: collapse;
+	}
+  td{
+ 	text-align: center;
+ 	height: 30px;
+ 	width: 200px;
+ }
+ caption {
+	font-size: 2.5em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	letter-spacing: 20px;
+}
+#qty{
+	text-align: center;
+}
+#total{
+	text-align: center;
+}
+.btn{
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+<table border="1">
+ <caption>장바구니 페이지</caption>
+	<tr>
+	<td colspan="2">품목</td>
+	<td colspan="2">가격</td>
+	<td>수량</td>
+	<td>합계</td>
+	</tr>
+	
+	<tr>
+	<td colspan="2">컴퓨터세트</td>
+	<td colspan="2">2,000,000원</td>
+	<td><input type="text" name="qty" id="qty" placeholder="0"><br></td>
+    <td><input type="text" name="total" id="total" placeholder="0"></td>
+	</tr>
+	<tr>
+	<td colspan="2">티셔츠</td>
+	<td colspan="2">50,000원</td>
+	<td><input type="text" name="qty" id="qty" placeholder="0"><br></td>
+    <td><input type="text" name="total" id="total" placeholder="0"></td>
+	</tr>
+	<tr>
+	<td colspan="2">음악파일</td>
+	<td colspan="2">1,000원</td>
+	<td><input type="text" name="qty" id="qty" placeholder="0"><br></td>
+    <td><input type="text" name="total" id="total" placeholder="0"></td>
+	</tr>
+	<tr>
+	<td colspan="2">영화파일</td>
+	<td colspan="2">5,000원</td>
+	<td><input type="text" name="qty" id="qty" placeholder="0"><br></td>
+    <td><input type="text" name="total" id="total" placeholder="0"></td>
+	</tr>
+</table>
+	<div class="btn">
+  		<button type="button">계산</button>
+   		<button type="button">구매</button>
+   		<button type="reset">초기화</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  img{
+  	height: 200px;
+  	width: 200px;
+  }
+#vif{
+  display: none;  /* 초기값: none 화면에서 안보이도록 설정 -  block / inline  */
+}
+#vif2{
+  display: none;  /* 초기값: none 화면에서 안보이도록 설정 -  block / inline  */
+}
+</style>
+
+<script type="text/javascript">
+function proc(){
+	
+	//iframe을 보이도록설정한다. -iframe요소를 검색 - id를 이용
+	var aa = document.getElementById('vif');
+	aa.style.display = "block";
+	
+}
+
+function proc1(){
+	
+	//iframe을 보이도록설정한다. -iframe요소를 검색 - id를 이용
+	var aa = document.getElementById('vif2');
+	aa.style.display = "block";
+	
+}
+</script>
+
+   
+</head>
+<body>
+   <h4>영화</h4>
+   
+   <br>
+   
+   <img src="../images/영화1.jpg" alt="윈터.jpg" onclick="proc()">
+   <img src="../images/영화2.jpg" alt="윈터.jpg" onclick="proc1()">
+<br><br>
+
+<iframe id= "vif" width="560" height="315" src="https://www.youtube.com/embed/cU_lhnaFNiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="vif2" width="560" height="315" src="https://www.youtube.com/embed/xM1CIQd_X4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+    
+</body>
+</html>

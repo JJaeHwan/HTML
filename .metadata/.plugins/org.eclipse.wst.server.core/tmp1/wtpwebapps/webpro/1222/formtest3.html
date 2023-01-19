@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+form{
+	border: 1px solid blue;
+	padding: 15px;
+	width: 50%;
+	margin: 5px auto;
+}
+
+label.lab{
+	display : inline-block;
+	width : 70px;
+	height: 35px;
+}
+
+</style>
+
+</head>
+<body>
+
+<form action="formsend3.jsp" method="post">
+
+	<label class="lab">이름</label>
+	<input type= "text" name="name"	><br>
+	
+	<label class="lab">첨부파일</label>
+	<input type="file" name="file"><br>
+	 <br>
+	<label>회</label><br>
+	<select name="fish" multiple="multiple" size="6">
+	  <option>대방어(겨울에 개존맛!!!!!)</option>
+	  <option>광어회</option>
+	  <option>우럭회</option>
+	  <option>참돔회</option>
+	  <option>숭어회</option>
+	  <option>(갑)오징어회 개존맛!!</option>
+	 
+	</select>
+	 <br><br>
+	<label>한식</label><br>
+	<select name="korea">
+	  <option>김치</option>
+	  <option>김밥</option>
+	  <option>떡볶이</option>
+	  <option>김치찌게</option>
+	  <option selected>된장찌게</option>
+	  <option>제육볶음</option>
+	
+	</select>
+	<br><br>
+	<input type="image" src="../images/미쳤다고윤정!@!.PNG" alt=""> <br>
+	<input type="submit" value="전송">
+	<input type="button" value="확인">
+	<input type="reset">
+	<br><br>
+	<button type="button">확인</button>
+	<button type="submit">전송</button>
+	<button>전송</button>
+	
+</form>
+
+</body>
+</html>

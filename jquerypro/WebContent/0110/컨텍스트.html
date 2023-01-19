@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	
+	$(function() {
+		
+		// 전체 p를 대상으로
+		$('p').css('font-size','1.5em').css('color','blue');
+		
+		// 클릭한 div내부의 p를 선택 - box는 제외
+		$('.box div').on('click', function() {
+			$('p', this).css('background','red');
+		
+		})
+		
+		//0번째  form객체 document Forms 내부의 p를 선택
+			
+	})
+
+</script>
+
+</head>
+<body>
+
+
+<div class="box">
+	
+	<div id="res1">
+		<p> 무궁화 꽃이 피었습니다</p>
+	</div>
+	
+	<div>
+		<p> 사랑은 늘 도망가 눈물이 ~ 나안 다 ~ </p>
+	</div>
+	
+	<p> 창모 - 담 배 </p>
+	
+</div>
+<form action="">
+	<p>능소화 꽃이 피었습니다.  </p>
+</form>
+
+<form action="">
+	<p>다섯살 때 부터 나 피아노를 쳤어 ? 영재였지 ~  </p>
+</form>
+
+</body>
+</html>

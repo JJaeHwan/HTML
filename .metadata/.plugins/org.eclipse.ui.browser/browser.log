@@ -1,0 +1,27 @@
+
+12월 31, 2022 13:23:24.315 NEW SESSION
+12월 31, 2022 13:23:24.315 [19216:11368:1231/132324.294:ERROR:device_event_log_impl.cc(215)] [13:23:24.294] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 13:23:24.316 [19216:11368:1231/132324.294:ERROR:usb_descriptors.cc(141)] Failed to read length for configuration 1.
+12월 31, 2022 13:23:24.316 [19216:11368:1231/132324.294:ERROR:usb_descriptors.cc(100)] Failed to read all configuration descriptors. Expected 2, got 1.
+12월 31, 2022 13:23:24.317 [19216:11368:1231/132324.294:ERROR:device_event_log_impl.cc(215)] [13:23:24.294] USB: usb_device_win.cc:96 Failed to read descriptors from \\?\usb#vid_10a5&pid_0007#5&18d341bf&0&8#{a5dcbf10-6530-11d2-901f-00c04fb951ed}.
+12월 31, 2022 13:23:24.319 [19216:11368:1231/132324.301:ERROR:device_event_log_impl.cc(215)] [13:23:24.301] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 13:23:24.319 [19216:11368:1231/132324.303:ERROR:device_event_log_impl.cc(215)] [13:23:24.302] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 13:24:20.428 [19216:18380:1231/132420.428:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+12월 31, 2022 14:26:37.551 NEW SESSION
+12월 31, 2022 14:26:37.551 [5480:5436:1231/142637.546:ERROR:device_event_log_impl.cc(215)] [14:26:37.545] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 14:26:37.551 [5480:5436:1231/142637.546:ERROR:usb_descriptors.cc(141)] Failed to read length for configuration 1.
+12월 31, 2022 14:26:37.552 [5480:5436:1231/142637.546:ERROR:usb_descriptors.cc(100)] Failed to read all configuration descriptors. Expected 2, got 1.
+12월 31, 2022 14:26:37.553 [5480:5436:1231/142637.546:ERROR:device_event_log_impl.cc(215)] [14:26:37.545] USB: usb_device_win.cc:96 Failed to read descriptors from \\?\usb#vid_10a5&pid_0007#5&18d341bf&0&8#{a5dcbf10-6530-11d2-901f-00c04fb951ed}.
+12월 31, 2022 14:26:37.553 [5480:5436:1231/142637.546:ERROR:device_event_log_impl.cc(215)] [14:26:37.546] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 14:26:37.553 [5480:5436:1231/142637.548:ERROR:device_event_log_impl.cc(215)] [14:26:37.548] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 14:27:34.110 [5480:9064:1231/142734.110:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+12월 31, 2022 16:01:41.85 NEW SESSION
+12월 31, 2022 16:01:41.85 [1632:7472:1231/160141.003:ERROR:device_event_log_impl.cc(215)] [16:01:41.003] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 16:01:41.86 [1632:7472:1231/160141.003:ERROR:usb_descriptors.cc(141)] Failed to read length for configuration 1.
+12월 31, 2022 16:01:41.86 [1632:7472:1231/160141.004:ERROR:usb_descriptors.cc(100)] Failed to read all configuration descriptors. Expected 2, got 1.
+12월 31, 2022 16:01:41.87 [1632:7472:1231/160141.004:ERROR:device_event_log_impl.cc(215)] [16:01:41.004] USB: usb_device_win.cc:96 Failed to read descriptors from \\?\usb#vid_10a5&pid_0007#5&18d341bf&0&8#{a5dcbf10-6530-11d2-901f-00c04fb951ed}.
+12월 31, 2022 16:01:41.87 [1632:7472:1231/160141.004:ERROR:device_event_log_impl.cc(215)] [16:01:41.004] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 16:01:41.88 [1632:7472:1231/160141.006:ERROR:device_event_log_impl.cc(215)] [16:01:41.006] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 31, 2022 16:02:36.370 [1632:11572:1231/160236.370:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

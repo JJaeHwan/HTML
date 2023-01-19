@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="stylesheet" href="../css/public.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(function () {
+	   $('#parent').on('click', function () {
+	      
+	        vparent = $("span").parent();
+	        
+	        $(vparent).css({"color": "red", "border": "2px solid red"})
+	   })
+	/* -------------------------------------------------------------------------- */
+	   $('#parents').on('click', function () {
+	      
+	        vparents = $("span").parents();
+	        
+	        $(vparents).css({"color": "orange", "border": "2px solid orange"})
+	   })
+	/* -------------------------------------------------------------------------- */
+	   
+	   $('#parentsel').on('click', function () {
+	      
+	        vparentsSel = $("span").parents('#res1')
+	        
+	        $(vparentsSel).css({"color": "yellow", "border": "2px dotted yellow"})
+	   })
+	/* -------------------------------------------------------------------------- */
+	   
+	   $('#parentun').on('click', function () {
+	      
+	        vparentsUntil = $("span").parentsUntil('#res1');
+	        
+	        $(vparentsUntil).css({"color": "hotpink", "border": "2px dotted hotpink"})
+	   })
+	/* -------------------------------------------------------------------------- */
+	   
+	   
+	})
+
+
+</script>
+
+
+<style type="text/css">
+#res1 *, #res2 * { 
+  display: block;
+  border: 2px solid black;
+  color: black;
+  padding: 5px;
+  margin: 15px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+	<br><br>
+	<input type="button" value="parent" id="parent">
+	<input type="button" value="parents" id="parents">
+	<input type="button" value="parentsel" id="parentsel">
+	<input type="button" value="parentun" id="parentun">
+	<br>
+	
+	<div id="res1">
+		<p>무궁화 꽃이 피었습니다</p>
+		<div style="width:500px;">div (great-grandparent)
+		   	 <ul>ul (grandparent)  
+		    	  <li>li (direct parent)
+		     	    <span>span</span>
+		     	 </li>
+		    </ul>   
+	    </div>
+	</div>
+	
+	<div id="res2">
+		<p>무궁화 꽃이 피었습니다</p>
+		<div style="width:500px;">div (great-grandparent)
+		   	 <ul>ul (grandparent)  
+		    	  <li>li (direct parent)
+		     	    <span>span</span>
+		     	 </li>
+		    </ul>   
+	    </div>
+	</div>
+</div>
+</body>
+</html>

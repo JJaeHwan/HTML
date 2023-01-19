@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+
+var today = new Date();
+var date1 = new Date(10000);
+var date2 = new Date("1999.5.13");
+var date3 = new Date(1999,5,13);
+
+proc1 = () =>{
+	
+	str = today + "<br>";
+	str += date1 + "<br>";
+	str += date2 + "<br>";
+	str += date3 + "<br>";
+	
+	document.querySelector('#res1').innerHTML = str;
+	
+	let vtoday = today.toLocaleString();
+	let vdate1 = date1.toLocaleString();
+	let vdate2 = date2.toLocaleString();
+	let vdate3 = date3.toLocaleString();
+	
+	str = vtoday + "<br>";
+	str += vdate1 + "<br>";
+	str += vdate2 + "<br>";
+	str += vdate3 + "<br>";
+	
+	document.querySelector('#res1').innerHTML += str;
+	
+}
+proc2 = () =>{
+	// 배열을 이용
+	dayarr = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일","토요일"];
+// 	dayarr[0] / dayarr[1] / dayarr[2]
+
+	vdays = today.getDay();  // 0 ~ 6 사이 리턴
+	
+	res = dayarr[vdays];
+	
+// 	vdays = today.getDay();  // 0 ~ 6 사이 리턴
+
+// 	switch (vdays) {
+// 	case 0:res = "일요일";break;
+// 	case 1: res = "월요일";break;
+// 	case 2: res = "화요일";break;
+// 	case 3: res = "수요일";break;
+// 	case 4: res = "목요일";break;
+// 	case 5: res = "금요일";break;
+// 	case 6:res = "토요일"; break;
+// 	default:break;
+		
+// 	}
+	
+	str = "오늘은 " + today.toLocaleString() + "<br>";
+	str += today.toLocaleDateString() + "<br>";
+	str += res+ " 입니다.";
+	
+	document.querySelector('#res2').innerHTML = str;
+}
+proc3 = () =>{
+	
+	myday = new Date(2023, 1-1, 4);
+	
+	//today의 getTime() myday의 getTime() - millisec를 리턴
+	curr = today.getTime();
+	my = myday.getTime();
+	
+	// times = today - myday millisec를 리턴
+	times = curr - my;
+	
+	console.log(curr,my,times);
+	
+	//millisec 실제 초 구하기 / 1000 
+	myear = times / 1000 / 60/ 60/ 24 ;
+	
+	//출력
+	str = `오늘 : ${today.toLocaleDateString()} <br>`;
+	str += `내생일 : ${myday.toLocaleDateString()} <br>`;
+	str += `태어난 날부터 오늘까지 ${myear}년째 살고 있어요.<br>`;
+	
+	document.querySelector('#res3').innerHTML = str;
+}
+
+</script>
+</head>
+<body>
+
+
+<div class="box">
+	<br><br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	요일구하기 - getDay(): 0~6으로 리턴
+	<br><br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br>
+	
+	<div id="res2"></div>
+</div>
+
+<div class="box">
+	경과시간 구하기 : getTime() - millisec를 리턴
+	리턴된 millisec값으로 실제 경과 시간(초, 분, 시간, 일, 년) 
+	<br><br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br>
+	
+	<div id="res3"></div>
+</div>
+</body>
+</html>

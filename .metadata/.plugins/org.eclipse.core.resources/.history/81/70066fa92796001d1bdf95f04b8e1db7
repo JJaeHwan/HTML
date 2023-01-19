@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div class="box">
+	<br><br>
+	<input type="button" value="text" id="text">
+	<input type="button" value="jsonobj" id="jobj">
+	<input type="button" value="jsonarr" id="jarr">
+	<input type="button" value="jsonmix" id="jmix">
+	<br>
+	
+	<div id="res1"></div>
+	<div id="res2"></div>
+	<div id="res3"></div>
+	<div id="res4"></div>
+</div>
+</body>
+</html>

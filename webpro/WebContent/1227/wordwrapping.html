@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  div{
+  	border: 1px solid blue;
+  	width: 500px;
+  	word-wrap : break-word; 
+  }
+
+</style>
+
+<script type="text/javascript">
+function proc1() {
+	
+	//입력
+	var vstr = prompt("입력하세요");
+	
+	//id=d1인 div요소에 추가
+	//부모요소.appendChild(자식요소)
+	//자식요소가 일반 문자열이 아니고 Object로 변환
+	
+	//부모요소를 검색
+	vparent = document.getElementById("d1");
+	vparent.style.backgroundColor = 'yellow';
+	//일반문자열을 Object로 변환
+	var vchild = document.createTextNode(vstr);
+	
+	//추가
+	vparent.appendChild(vchild);
+	
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" value="확인" onclick="proc1()">
+<div id = "d1">
+강원도 춘천시에서 태어났다.[37] 2009년 U-17 국가대표팀을 거치고, 2010년 함부르크 SV와 4년 계약과 함께 역대 최고 수준의 초특급
+ 유망주라는 립서비스를 받으면서, 해외에서도 상당한 주목을 받았다. 그리고 2010년 10월 30일, 18세에 치른 데뷔전에서 데뷔골을
+ 장식하면서 새로운 스타 탄생을 예고했다. 이후, 분데스리가 명문 구단 바이어 04 레버쿠젠으로부터 구단 역대 최고 이적료 기록을
+ 경신하면서 영입을 하는 등, 한국에서는 쉽게 볼 수 없는 차세대 태극전사의 에이스로서 전 세계의 언론으로부터 주목을 받기 시작했다.
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccdddddddddddddddddddeeeeeeeeeeeeefffffffffffffffffgggggggggggggggggggggg
+</div>
+
+
+</body>
+</html>

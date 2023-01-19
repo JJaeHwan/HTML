@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+
+proc1 = () =>{
+	
+	// ul검색
+	list = document.getElementsByTagName('ul')[0];
+	list = document.querySelector('ul');
+	
+	//li 검색
+	items = list.getElementsByTagName('li');
+	
+	str = "";	
+	
+	for(i=0; i<items.length; i++){
+		str += items[i].firstChild + "<br>";
+	}
+	document.querySelector('#res1').innerHTML = str;
+	
+}
+
+	arr = ["Hello", "Happy New Year", "Good Boy", "창모- 담배", "사랑은 늘 도망가", "폴라로이드", "창모 - 널 잊어야해",
+			"덕소리", "아이야", "마세라티&포르쉐"]
+	
+proc2 = () =>{
+	
+	//삭제버튼 보이게 하기 - 검색
+	document.getElementById('del').style.display = "inline";
+	
+	rand = parseInt(Math.random() * arr.length);
+	
+	text = arr[rand];
+	
+	textnode = document.createTextNode(text);
+	
+	// p태그를 생성
+	ptag = document.createElement('p');
+	
+	// p태그에 textnode를 붙임
+	ptag.appendChild(textnode);
+	
+	// p태그를 res2번에 붙임
+	document.getElementById('res2').appendChild(ptag);
+}
+
+proc3 = () =>{
+	
+	//ul을 검색한다.
+	   list = document.getElementsByTagName('ul')[1];
+	   
+	   //li를 검색한다.
+	   items =list.getElementsByTagName('li');
+	   
+	   //반복문 사용 
+	   for(i = 0; i < items.length; i++){
+	      
+	      //- li의 문자열을 가져온다.
+	      text = items[i].firstChild.data;
+	      
+	      //이미지 객체를 생성
+	      imgtag = document.createElement('img');
+	      imgtag.src ="../images/" + text;
+	      imgtag.alt = text;
+	      
+	   
+	      // li요소에 이미지 객체를 추가 한다.
+	      items[i].appendChild(imgtag);
+	
+}
+}
+
+proc4 = (item) =>{
+	//item은 클릭한 li 객체 - this로 넘어온 매개변수
+	text = item.firstChild.data;
+	// item의 문자열을 꺼낸다. 
+	 //이미지 객체를 생성
+    imgtag = document.createElement('img');
+    imgtag.src ="../images/" + text;
+    imgtag.alt = text;
+    
+ 
+    // li요소에 이미지 객체를 추가 한다.
+    item.appendChild(imgtag);
+}
+
+fdelete = (but) =>{
+	
+	// 삭제할 대상의 부모를 찾는다
+	vparent = document.getElementById('res2');
+	
+	
+	// 부모에서 삭제할 대상을 선택한다. -firstChild or lastChild
+	vchild = vparent.firstChild;
+	
+	// 삭제
+	vparent.removeChild(vchild);
+	
+	// 삭제할 대상이 있는지 체크
+	// 없다면 삭제버튼을 감춘다. 
+	count = vparent.childElementCount;
+	
+	console.log(count);
+	
+	if(count < 1){
+		but.style.display = 'none';
+	}
+
+}
+
+proc5 = () =>{
+	
+	// 랜덤발생
+	rand = parseInt(Math.random() * arr.length);
+	
+	// 랜덤으로 문자를 선택
+	text = arr[rand];
+	
+	// 선택된 문자로 textNode생성
+	textnode = document.createTextNode(text);
+
+	//버튼 태그 생성<input type="button" value="삭제">
+	but = document.createElement('input');
+	but.type ="button";
+	but.value = "제거";
+	but.onclick = function() {
+		deltarget = this.parentNode; //ptag
+		deltarget.remove();
+	}	
+	
+	
+	// p태그를 생성
+	ptag = document.createElement('p');
+	
+	// p태그에 textnode를 붙임
+	ptag.appendChild(textnode);
+	
+	// p태그에 버튼태그를 붙임
+	ptag.appendChild(but);
+	
+	//id = res5에 ptag를 붙임
+	document.getElementById('res5').appendChild(ptag);
+	
+}
+
+</script>
+
+<style type="text/css">
+
+img{
+	width : 100px;
+	height : 100px;
+	border-radius: 50%; 
+}
+input[value=삭제]{
+	display: none;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="box">
+	각 아이템들의 문자열을 가져온다.<br><br>
+	<ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ul>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	새로운 요소를 만든다. 랜덤으로 발생되는 문자열을 id=res2요소에 추가한다.<br>
+	createElement(tagName)<br>
+	createTextNode(text)<br>
+	tagName.appendChild(text)<br>
+	<br>
+	
+	<input type="button" value="확인" onclick="proc2()">
+	<input type="button" value="삭제" id="del" onclick="fdelete(this)">
+	<br>
+	
+	<div id="res2"></div>
+</div>
+
+<div class="box">
+	새로운 요소를 만든다. 아이템에 해당하는 이미지를 만든다<br>
+	createElement(tagName) - img태그를 생성<br>
+	li 요소에 붙여라<br>
+	<br>
+	<ul>
+        <li>미쳤다고윤정!@!.PNG</li>
+        <li>윈터.jpg</li>
+        <li>파나메라.jpg</li>
+        <li>수지.gif</li>
+        <li>수지.jpg</li>
+    </ul>
+	<input type="button" value="확인" onclick="proc3()">
+	<br>
+	
+	<div id="res3"></div>
+</div>
+ 
+<div class="box">
+	새로운 요소를 만든다. 아이템에 해당하는 이미지를 만든다<br>
+	createElement(tagName) - img태그를 생성<br>
+	li 요소에 붙여라<br>
+	<br>
+	<ul>
+        <li onclick="proc4(this)">미쳤다고윤정!@!.PNG</li>
+        <li onclick="proc4(this)">윈터.jpg</li>
+        <li onclick="proc4(this)">파나메라.jpg</li>
+        <li onclick="proc4(this)">수지.gif</li>
+        <li onclick="proc4(this)">수지.jpg</li>
+    </ul>
+	<br>
+	
+	<div id="res4"></div>
+</div>
+
+<div class="box">
+	새로운 요소를 만든다. 랜덤으로 발생되는 문자열을 id=res5요소에 추가한다.<br>
+	createElement(tagName) - ptag<br>
+	createTextNode(text) - 램덤으로 발생되는 문자열<br>
+	createElement(tagName) - 삭제버튼<br>
+	ptag.appendChild(텍스트노드)/ptag.appendChild(삭제버튼)  <br>
+	
+	res5.appendChild(ptag); <br>
+	<br>
+	
+	<br>
+	<input type="button" value="추가삭제" onclick="proc5()">
+	<br>
+	<div id="res5"></div>
+</div>
+
+</body>
+</html>

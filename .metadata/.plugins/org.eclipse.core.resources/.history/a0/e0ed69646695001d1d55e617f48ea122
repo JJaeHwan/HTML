@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function() {
+	$('#btn1').on('click', function() {
+		$('<img>',{
+				'src' : '../images/고윤정.jfif',
+				'alt' : '고윤정.jfif'
+		}).appendTo('#res1');
+			
+		
+	})
+	
+})
+
+</script>
+
+<style type="text/css">
+img{
+	width: 150px;
+	height: 150px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="box">
+	bind() : 이벤트 핸들러 등록<br>
+	실행 이전에 body-document에 미리 코딩되어 생성된 요소 들에만 적용이 된다.<br>
+	<br>
+	<input type="button" value="확인" id="btn1">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<%@page import="kr.or.ddit.member.vo.MemberVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ibatis.sqlmap.client.SqlMapClient"%>
+<%@page import="kr.or.ddit.ibatis.config.SqlMapClientFactory"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%
+// controller-----------
+// 클라이언트 전송시 데이터를 받는다.
+
+
+
+// 데이터를 바탕으로 해서 db처리 한다. -sqlMapClient객체가 필요
+	SqlMapClient client = SqlMapClientFactory.getSqlMapClient();
+
+
+// db처리의 결과를 가지고 응답데이터를 생성한다. - json Objec 배열데이터
+	List<MemberVO> list = client.queryForList("member.selectAll");
+%>
+	
+<%-- view--%>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

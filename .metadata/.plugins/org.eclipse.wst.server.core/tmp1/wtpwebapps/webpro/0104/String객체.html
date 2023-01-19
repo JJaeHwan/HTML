@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+str = "I love Korea 화이팅 Happy New Year";
+
+proc1 = () =>{
+	
+	vat = str.charAt(7);
+	vcode = str.charCodeAt(7);
+	
+	//출력내용
+	vstr = `str.charAt(7) : ${str.charAt(7)} <br>`;
+	vstr += `str.charCodeAt(7) : ${str.charCodeAt(7)}<br>`;
+	document.getElementById('res1').innerHTML = vstr;
+	
+	//--indexOf(문자열)------------------------------------
+	idx = str.indexOf("Happy");
+	
+	// 출력 내용
+	vstr = `str.indexOf("Happy") : ${idx} <br>`;
+	document.getElementById('res1').innerHTML += vstr;
+	
+	a = "Happy ";
+	b = "new Year";
+	console.log(a.concat(b));
+	console.log(a.toUpperCase());
+	console.log(b.toLowerCase());
+	
+}
+
+proc2 = () =>{
+	vsub = str.substring(2, 10);
+	vsli = str.slice(2,10);
+	vstr = str.substr(2, 10);
+	
+	//출력내용
+	vres = `str.substring(2, 10) : ${vsub} <br>`;
+	vres += `str.slice(2,10) : ${vsli} <br>`;
+	vres += `str.substr(2,10) : ${vstr} <br>`;
+	document.getElementById('res2').innerHTML += vres;
+}
+
+proc3 = () =>{
+	// 입력한 내용 가져오기 - id = res3 검색. value
+	
+	textvalue = document.getElementById('res3').value;
+	// 입력한 내용 속에는 엔터기호가 포함되어 있다.
+	console.log(textvalue);
+	
+	//출력 엔터(\r\n)를 <br>태그로 변환
+	textvalue = textvalue.replace(/\n/g, "<br>");
+	
+	
+	document.getElementById('div3').innerHTML = textvalue;
+	
+	
+// 	a = document.getElementsByTagName('textarea')[0];
+// 	a.value
+}
+
+proc4 = () =>{
+	arr = str.split(" ", 3);
+	
+	//출력내용
+	vstr = "문자열의 길이 : " + str.length + "<br>";
+	vstr += "문자열을 배열로 변환:  + str.split('  ') <br>";
+	vstr+= "배열의 길이: " + arr.length + "<br>";
+	
+	for(x in arr){
+		vstr += `arr[${x}] : ${arr[x]} <br> `; 
+
+	}
+	document.getElementById('res4').innerHTML += vstr;
+	
+}
+
+</script>
+</head>
+<body>
+
+
+<div class="box">
+	str = "I love Korea 화이팅 Happy New Year";
+	charAt(index) : index위치의 문자를 리턴 <br>
+	charCodeAt(index) : index위치의 unicode 값을 리턴	<br><br>
+	idx = str.indexOf("Happy") : Happy문자열의 시작 위치를 리턴 <br><br>
+	<br><br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	str = "I love Korea 화이팅 Happy New Year"<br>
+	substring(start, end) : start ~ end -1 까지 문자 추출 <br>
+	slice(start, end) : start ~ end -1 까지 문자 추출<br>
+	substr(start,length) : start에서부터 length(갯수)만큼 문자 추출<br>
+	<br><br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br>
+	
+	<div id="res2"></div>
+</div>
+
+<div class="box">
+	str = "I love Korea 화이팅 Happy New Year"<br>
+	replace("문자열/정규식)","바꿀 문자열")<br>
+	textarea에 입력하여 div에 출력<br><br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br>
+	
+	<textarea row="10" cols="50" id="res3"></textarea>
+	<br><br>
+	<div id = "div3"></div>
+</div>
+
+<div class="box">
+	str = "I love Korea 화이팅 Happy New Year"<br>
+	split(구분자,갯수) : 구분자를 기준으로 문자열을 분리하여 배열로 리턴<br>
+	split(" ") : 공백을 기준으로 문자열을 배열로 변환한다.<br>
+	split(" ", 3) : 공백을 기준으로 문자열을 배열로 변환시 3개만 실행한다.<br>
+	<input type="button" value="확인" onclick="proc4()">
+	<br>
+	
+	<div id="res4"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+127.0.0.1 - - [19/Jan/2023:16:21:25 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:21:26 +0900] "GET /jquerypro/lprod_prod/lprod_prod.html HTTP/1.1" 200 820
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:21:26 +0900] "GET /jquerypro/js/jquery-3.6.3.min.js HTTP/1.1" 200 89947
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:21:26 +0900] "GET /jquerypro/css/public.css HTTP/1.1" 200 596
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:21:39 +0900] "GET /jquerypro/lprodList.do HTTP/1.1" 500 14883
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:23:57 +0900] "GET /jquerypro/lprodList.do HTTP/1.1" 500 2070
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:27:14 +0900] "GET /jquerypro/lprod_prod/lprod_prod.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:16:27:17 +0900] "GET /jquerypro/lprodList.do HTTP/1.1" 500 2070

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+
+proc1 = () =>{
+	setTimeout(function(){
+		// id = res1을 검색 - 배경색을 변경
+		document.getElementById('res1').style.backgroundColor = 'red';
+		
+	}, 1000)
+		
+}
+proc2 = (but) =>{
+	
+	but.style.display = 'none';
+// 	but.style.visibility = 'hidden';
+	
+	gbut = but;
+	
+	//rgb(123, 250, 98)
+	//지금 현재 버튼을 안보이도록 설정
+	
+	a = setInterval(function(){
+		console.log(a);
+		// 랜덤을 이용하여 색상을 발생
+		cr = parseInt(Math.random() * 256);		
+		cg = parseInt(Math.random() * 256);		
+		cb = parseInt(Math.random() * 256);
+		
+		cr = cr.toString(16);
+		cg = cr.toString(16);
+		cb = cr.toString(16);
+		
+		// id = res1을 검색 - 배경색을 변경
+// 		document.getElementById('res2').style.backgroundColor = `rgb(${cr},${cg},${cb})` ;
+		document.getElementById('res2').style.backgroundColor = `#${cr}${cg}${cb}`;
+		
+	}, 500)
+	
+}
+
+stop = () =>{
+	
+// 	gbut.style.visibility = 'visible';
+	gbut.style.display = 'inline';
+	clearInterval(a);
+	
+}
+
+
+arr = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+
+window.onload = function(){
+	
+	setInterval(function(){
+		
+		today = new Date();
+		
+		days = today.getDay();
+		
+		today = today.toLocaleString();
+		
+	//출력내용
+	vstr = today + "<br>";
+	vstr+= arr[days];
+	
+	document.getElementById('res3').innerHTML = vstr;
+	
+	},1000);
+	
+	
+}
+
+</script>
+
+
+
+</head>
+<body>
+
+
+<div class="box">
+	오늘의 날짜 : 
+	<div id="res3"></div>
+</div>
+<div class="box">
+	setTimeout(fn, millisec) : millisec 시간이 경과하면 fn이 호출된다.<br><br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	id변수 = setTimeout(fn, millisec) : millisec 시간이 경과할때마다 fn이 계속 호출된다.<br>
+	clearInterval(id변수)<br>
+	<input type="button" value="확인" onclick="proc2(this)">
+	<input type="button" value="종료" onclick="stop()">
+	<br>
+	
+	<div id="res2"></div>
+</div>
+</body>
+</html>

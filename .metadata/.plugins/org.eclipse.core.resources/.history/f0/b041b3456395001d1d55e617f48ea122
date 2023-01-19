@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#btn1').on('click', function(){
+		vchk = $('#checkTest').prop('checked')
+		
+		vopt = $('#selTest option:eq(2)').prop('selected');
+		
+		vtxt = $('#txtTest').prop('readonly');
+		
+		vrun = $('#runBtn').prop('disabled');
+		
+		console.log(vchk, vopt, vtxt, vrun);
+		
+		// 상태변경
+		$('#checkTest').prop('checked',  !vchk);
+		$('#selTest option:eq(2)').prop('selected',  !vopt);
+		$('#txtTest').prop('readonly', !vtxt);
+		$('#runBtn').prop('disabled', !vrun);
+		
+		
+		
+		
+	})
+	
+})
+
+</script>
+
+</head>
+<body>
+
+
+<div class="box">
+버튼을 클릭하면 현재 상태값을 변경한다.
+	<br><br>
+	<input type="button" value="확인" id="btn1">
+	<br>
+		<form>
+			체크박스(라디오버튼) :    
+			 <input type="checkbox" id="checkTest"  checked><br><br>
+			
+			리스트박스(select객체) : 
+			 <select id="selTest" >
+			     <option value="1">하나</option> 
+			     <option value="2">둘</option>
+			     <option value="3" selected >셋</option> 
+			     <option value="4">넷</option>
+			 </select><br><br>
+			
+			 text객체	(readonly) : <input type="text" value="가나다" id="txtTest"><br><br>
+			
+			 button객체(disabled) : 
+			       <input type="button" value="실행" id="runBtn" disabled="disabled" onclick = "alert('hello')">
+		</form>
+	
+	<div id="res1">
+	
+	
+	</div>
+</div>
+
+<div class="box">
+	
+	<br><br>
+	
+	<div id="res2">
+		<input type="checkbox" id="all">전체선택
+	
+		<input type="checkbox" class="chk" name="chkb" value = "1">1
+		<input type="checkbox" class="chk" name="chkb" value = "2">2
+		<input type="checkbox" class="chk" name="chkb" value = "3">3
+		<input type="checkbox" class="chk" name="chkb" value = "4">4
+		<input type="checkbox" class="chk" name="chkb" value = "5">5
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  body{
+  	min-width: 1000px;
+  }
+  div{
+  	margin: 5px;
+  	padding: 5px;
+  	border: 1px solid gray;
+  	border-radius: 30px;
+  }
+  
+  #content{
+  	display: flex;
+  }
+  
+  #header{
+    background-color: yellow;
+    height: 40px;
+    width: 100%;
+  }
+  #left{
+    background-color: #00FFFF;
+    width: calc(20% - 3px);
+    height: 250px;
+  }
+  #center{
+    background-color: #FF8000;
+    width: calc(56% - 3px);
+    height: 250px;
+  }
+  #right{
+    background-color: #00FFFF;
+    width: calc(20% - 3px);
+    height: 250px;
+  }
+  #footer{
+    background-color: yellow;
+    clear: both;
+    height: 40px;
+    width: 100%;
+  }
+  
+</style>
+</head>
+<body>
+
+<div id="header">header</div>
+<div id="content">
+	<div id="left">left</div>
+	<div id="center">center</div>
+	<div id="right">right</div>
+</div>
+<div id="footer">footer</div>
+
+</body>
+</html>
