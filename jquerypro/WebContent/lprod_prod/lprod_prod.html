@@ -15,19 +15,136 @@
 				type : 'get',
 				success : function(res) {
 					
+					code="";
+					
+					$.each(res, function(i, v) {
+						code += `<option value="${v.gu}">${v.nm}</option>`
+						
+					})
+					
+					$('#lprod').html(code);
+					
 				},
 				error : function(xhr) {
 					alert("상태: " + xhr.status);
 				},
+				
 				dataType : 'json'
 				
 			})
 			
 		})
 		
+		
+	   $('#lprod').on('change', function () {
+      
+      
+      //선택한 요소의 value값을 얻어온다.
+      lgu = $('option:selected', this).val();
+//       alert(lgu);
+      $.ajax({
+         url : '/jquerypro/ProdList.do',
+         type : 'post',
+      //   data : 'gu=' + lgu;
+      
+         data : {"gu" : lgu },
+         success : function (res) {
+            //데이터가 있는지 없는지 비교
+            code = "";
+            
+            
+            if(res.sw == "ok"){
+               $.each(res.datas, function(i, v) {
+                  code += `<option value="${v.id}">${v.name}</option>`
+               })
+            }else{
+               code += `<option value="0">데이터 없어~~~ 찾지마~~</option>`
+               
+               // 이미지를 생성
+               vimg = $('<img>', { 
+            	   'src' : '../images/고윤정2.jfif',
+            	   'alt' : '고윤정2.jfif'
+               })
+               $('#res1').empty();
+               $(vimg).appendTo($('#res1'))
+               
+            }
+            $('#prod').html(code);
+            
+         },
+         error : function (xhr) {
+            alert("상태 : " +xhr.status);
+         },
+         dataType : 'json'
+      })
+      
+   })
+   $('#prod').on('change', function() {
+	// 선택한 항목의 value값을 얻는다
+	vid = $('option:selected' , this).val();
+	
+	$.ajax({
+		url : 'http://localhost/jquerypro/Prodetail.do',
+		data : {"id" : vid},
+		type : 'post',
+		success : function(res) {
+			str = "";
+			 
+			 $.each(res, function(i,v){
+				
+				 str = "<table border=1 >";
+		            str += "<tr><td>PROD_ID</td>";
+		            str += "<td>" + res.id + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_NAME</td>";
+		            str += "<td>" + res.name + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_LGU</td>";
+		            str += "<td>" + res.lgu + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_BUYER</td>";
+		            str += "<td>" + res.buyer + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_COST</td>";
+		            str += "<td>" + res.cost + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_PRICE</td>";
+		            str += "<td>" + res.price + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_SALE</td>";
+		            str += "<td>" + res.sale + "</td></tr>";
+		          
+		            str += "<tr><td>PROD_OUTLINE</td>";
+		            str += "<td>" + res.outline + "</td></tr>";
+		            
+		            str += "<tr><td>PROD_DETAIL</td>";
+		            str += "<td>" + res.detail + "</td></tr>";
+		            str += "</table>";
+		            
+		            $('#res1').html(str);
+		}),
+		error : function(xhr) {
+			alert("상태: " + xhr.status)
+		},
+		dataType : 'json'
+		
+	})
+})
+		
+		
+		
+		
+		
 	})
 
 </script>
+<style type="text/css">
+img{
+  width: 150px;
+  height: 150px;
+}
+
+</style>
 
 </head>
 <body>

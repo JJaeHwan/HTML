@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.lprod.dao{ILprodDao.java[ILprodDao" modifiers="513" timestamp="1674105459406"/>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.lprod.service{ILprodService.java[ILprodService" modifiers="513" timestamp="1674105643964"/>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.lprod.dao{IProdDao.java[IProdDao" modifiers="513" timestamp="1674105643934"/>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.lprod.service{IProdService.java[IProdService" modifiers="513" timestamp="1674105643903"/>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.member.dao{IMemberDao.java[IMemberDao" modifiers="513" timestamp="1674626617416"/>
+<typeInfo handle="=jquerypro/src&lt;kr.or.ddit.member.service{IMemberService.java[IMemberService" modifiers="513" timestamp="1674626753895"/>
+</typeInfoHistroy>

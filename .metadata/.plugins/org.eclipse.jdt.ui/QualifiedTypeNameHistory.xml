@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.ILprodDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.LprodDaoimpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.vo.LprodVO"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.ILprodService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.LProdServiceimpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.ProdDaoimpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.IProdService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.IProdDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.ProdServiceimple"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.vo.ProdVO"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="kr.or.ddit.ibatis.config.SqlMapClientFactory"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.IMemberDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.IMemberService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

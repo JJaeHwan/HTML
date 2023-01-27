@@ -80,7 +80,7 @@
     <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">
         <SSLHostConfig>
-            <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
+            <Certificate certificateKeystoreFile="C:\work\tomcat.keystore" keystorePa
                          type="RSA" />
         </SSLHostConfig>
     </Connector>
@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\jquerypro" path="/jquerypro" reloadable="true" source="org.eclipse.jst.jee.server:jquerypro"/><Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\webpro" path="/webpro" reloadable="true" source="org.eclipse.jst.jee.server:webpro"/></Host>
+      <Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\jquerypro" path="/jquerypro" reloadable="true" source="org.eclipse.jst.jee.server:jquerypro"/><Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\webpro" path="/webpro" reloadable="true" source="org.eclipse.jst.jee.server:webpro"/><Context docBase="D:\5.J_Query\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\pumpkin" path="/pumpkin" reloadable="true" source="org.eclipse.jst.jee.server:pumpkin"/></Host>
     </Engine>
   </Service>
 </Server>
