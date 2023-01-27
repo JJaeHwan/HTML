@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+
+proc1 = () =>{
+	
+	a = window.open("난수객체.html", "난수객체","width = 500 height = 400");
+	
+// 	a.resizeTo(100,100);
+	a.resizeBy(100,100);
+	
+}
+
+proc2 = () =>{
+	
+	window.open("sub.html","winsub","width=400 height=500 left=200 top=300");
+}
+
+</script>
+</head>
+<body>
+
+
+<div class="box">
+	새로운 창을 연다<br>
+	window.open(url, target/name, spec)<br><br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	새로운 창을 연다<br>
+	window.open(url, target/name, spec)<br>
+	새로운창(자식창)에서 입력해서 현재창(부모창)에서 출력한다<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br>
+	
+	<div id="res2"></div>
+</div>
+</body>
+</html>

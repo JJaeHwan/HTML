@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var vinput		//함수 위에서는 var를 쓰나 안쓰나 전역변수
+function proc1() {
+	
+	 vinput = prompt("입력하세요"); // var를 쓰면 지역 안쓰면 전역 
+	console.log(vinput);
+	window.alert(vinput);
+	
+	//div에 출력- div를 검색
+	vdiv = document.getElementsByTagName("div");
+	vdiv[0].innerText = vinput;
+	
+	vdiv = document.getElementsByTagName("div")[0];
+	vdiv.innerText = vinput;
+	
+	str = "<h1>" + vinput + "</h1>";
+	vdiv.innerHTML = str;
+}
+
+</script>
+
+<style type="text/css">
+  div{
+  	height: 50px;
+  	padding: 20px;
+  	border:  2px solid blue;
+  	
+  }
+
+</style>
+</head>
+<body>
+
+
+<input type="button" value="확인" onclick="proc1()">
+<br><br>
+<p> 입력받은 값을 출력하세요</p>
+<div>hello</div>
+</body>
+</html>

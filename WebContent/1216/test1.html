@@ -1,0 +1,71 @@
+<!doctype html>   <!-- -->
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>테스트1</title>
+		
+		
+		<style>
+		p{   /* 스타일식 주석 */
+		  font-size : 40px; 
+		  color : red;
+		  background-color : yellow;
+		  
+		}
+		/*h1,h2,h3,h4,h5,h6{
+		
+		
+		}
+		*/
+		<!--기본적인 순서는 위에서 아래로 진행되는데 id와 class가 있으면 id가 우선순위이다 -->
+		.headline{ 
+			border : 13px double blue;
+			border-left : none;
+			border-right : none;
+			border-bottom : 13px double red;
+		}
+		
+		#hh1{
+			border : 5px solid green;
+		
+		}
+		
+		
+		
+		</style>
+	</head>
+	
+	<body>
+	<!--블럭(block)요소 : 한줄전체를 차지 하는 요소, 자동으로 줄 바꿈 요소: 시작태그 내용 끝태그
+		p, h1 ~ h6(헤드라인) 
+		인라인(inline)요소 : 내용에 맞춰서 크기가 정해지는 요소
+	-->
+	
+	<!--br: 강제 줄바꿈 -->
+	
+	안녕하세여 ? <br>
+	br태그는 줄바꿈입니다 <br>
+	저도 자동실행 해주세요... <br>
+	shift + f5 = 강력한 새로고침
+	html 입니다<br>
+	Hello Html<br>
+	
+	<!--p: 吏㏃� �떒�씫 = �옄�룞�쑝濡� 以꾩씠 諛붾�먮떎. �쐞�븘�옒 �뿬諛깆쓣 �몴�떆�븳�떎, �븳以� �쟾泥대�� 李⑥��븯�뒗 �슂�냼�떎(釉붾윮�슂�냼�떎) -->
+	
+	<p>p태그는 줄바꿈 + 위아래 여백</p>
+	<p> 안녕하세여 ?  </p>
+	<p>저도 자동실행 해주세요...</p>
+	<p>shift + f5 = 강력한 새로고침</p>
+	 
+	 
+	  <!-- 보통 제목을 나타낼때 쓴다  -->
+	  <!--""이거랑 ''이거랑 같다 "' 이거는 X, ""사이에 공백 금지 -->
+	  <!--스타일 같은거 주려면 class, 다른거 주려면 id -->
+	<h1 id ="hh1" class ="headline">안녕하소오~ html이오~</h1>
+	<h2 id ="hh2" class ="headline">안녕하소오~ html이오~</h2>
+	<h3 id ="hh3" class ="headline">안녕하소오~ html이오~</h3>
+	<h4 id ="hh4" class ="headline">안녕하소오~ html이오~</h4>
+	<h5 id ="hh5" class ="headline">안녕하소오~ html이오~</h5>
+	<h6 id ="hh6" class ="headline">안녕하소오~ html이오~</h6>
+	</body>
+</html>

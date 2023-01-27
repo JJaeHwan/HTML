@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="formsend2.jsp" method="post">
+
+  이름<input type="text" name="name"><br> 
+  성별<input type="radio" name="gender" value="남자" checked>남자
+ 	  <input type="radio" name="gender" value="여자">여자<br>
+  좋아하는 음식 <input type="checkbox" value="떡볶이" name="food" checked>떡볶이
+  				<input type="checkbox" value="김밥" name="food">김밥
+  				<input type="checkbox" name="food" value="라면">라면
+  				<input type="checkbox" name="food" value="제육볶음">제육볶음
+  				<input type="checkbox" name="food" value="쫄면">쫄면
+  				<input type="checkbox" name="food" value="돈까스" checked>돈까스
+  				<input type="checkbox" name="food" value="우동">우동 <br>
+  				
+  자기소개<br>
+  <textarea rows="5" cols="50" name="area"></textarea>
+  <br><br>
+  <input type="submit" value="전송">
+  <input type="reset" value="취소">
+</form>
+
+</body>
+</html>

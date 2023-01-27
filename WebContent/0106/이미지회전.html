@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script type="text/javascript">
+proc1 = (but) =>{
+	
+	but.style.display = "none";
+	
+	gbut = but;
+	
+	vres1 = document.getElementById('res1');
+	
+	a = setInterval(function() {
+		
+	vchild = vres1.firstChild;
+	
+	vres1.appendChild(vchild);
+		
+	}, 1);
+	
+}
+
+stop = () =>{
+	
+	gbut.style.display = 'inline';
+	clearInterval(a);
+	
+}
+
+</script>
+
+<style type="text/css">
+  img{
+  	width: 100px;
+  	height: 100px;
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="box">
+	<br><br>
+	종료버튼 만들고 실행을 종료하게 한다
+	종료버튼 클릭하면 확인버튼이 나오게 한다.
+	<input type="button" value="확인" onclick="proc1(this)">
+	<input type="button" value="종료" onclick="stop()">
+	<br>
+	
+	<div id="res1">
+		<img src="../images/Anne-Marie(앤마리)-2002.jpg" alt="">
+		<img src="../images/미쳤다고윤정!@!.PNG" alt="">
+		<img src="../images/수지.gif" alt="">
+		<img src="../images/수지.jpg" alt="">
+		<img src="../images/윈터.jpg" alt="">
+		<img src="../images/고윤정.jfif" alt="">
+		<img src="../images/고윤정2.jfif" alt="">
+		</div>
+</div>
+</body>
+</html>

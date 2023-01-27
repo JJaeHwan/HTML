@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+label {
+   display : inline-block;
+   width : 150px;
+   height : 30px;
+}
+form {
+   border : 1px dotted gray;
+   padding : 10px;
+   width :50%;
+   margin : 20px auto;
+}
+</style>
+
+<script type="text/javascript">
+function changeColor(element) {
+   //element는 매개변수 - input type=color 인 input객체를 받은 변수
+   //element 변경된 색상의 값을 가져온다 - html요소에 접근
+   
+   alert(element.value);
+   //form태그의 배경색을 변경
+   vform = document.getElementsByTagName('form')[0];
+   vform.style.backgroundColor = element.value;
+   
+}
+
+// FUNCTION CHANGECOLOR() {  주석처리 ctrl +shift + C
+//    //HTML요소에 접근검색
+//    VCOLOR = DOCUMENT.FF.COLOR;
+// }
+</script>
+</head>
+<body>
+<h1>회원가입 페이지</h1>
+<form name="ff" action="newtype.jsp" method="post">
+   <label>아이디</label>
+   <input type="text" name="Id"> <button type="button">중복 검사</button> <br>
+   <label>패스워드</label>
+   <input type="text" name="pass"> <br>
+   <label>패스워드 확인</label>
+   <input type="text" name="passcheck"> <br>
+   <label>이름</label>
+   <input type="text" name="name" placeholder= "홍길동"> <br>
+   <label>휴대폰번호</label>
+   <input type="text" name="tel" placeholder="010-1234-5678"><br>
+   <label>이메일</label>
+   <input type="email" name="email" placeholder="abc123@google.com"> <br>
+   <label>생일</label>
+   <input type="date" name="bir"><br>
+   <label>홈페이지</label>
+   <input type="text" name="home" placeholder="www.google.com"> <br>    
+   <label>성별</label> 
+ <input type="radio" name="gender" value="남자"> 남자
+ <input type="radio" name="gender" value="여자"> 여자<br>    
+
+   
+   <button type="button">제출</button>
+   <button type="reset">초기화</button>
+
+
+</form>   
+</body>
+</html>
