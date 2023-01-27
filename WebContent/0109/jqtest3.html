@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.3.min.js"  type="text/javascript"></script>
+
+<script type="text/javascript">
+	
+// 	window.onload = () =>{   -- 람다
+		
+// 	}		
+	
+	$(document).ready(function() {
+		$('.box1 h1').on('click', function() {
+// 			this.style.color = 'red';
+			$(this).css('color','blue');
+			
+		});
+		
+	vbox3 = document.querySelector('.box3');
+	h1list = vbox3.querySelectorAll('h1');
+	
+	for(i = 0; i < h1list.length; i++){
+		h1list[i].addEventListener('click', hclick)
+	}
+	
+	})
+	
+	hclick = function() {
+		this.style.color = 'green';
+	}
+	
+	
+	proc2 = (h1tag) =>{
+// 		h1tag.style.background = 'pink';
+		
+		$(h1tag).css('background','skyblue');
+		
+		
+	}
+
+</script>
+
+</head>
+<body>
+
+
+<div class="box box1">
+	<br><br>
+	<h1>무궁화 꽃이 피었습니다</h1>
+	<h1>능소화 꽃이 피었습니다</h1>
+	<h1>진달래 꽃이 피었습니다</h1>
+	<h1>라일라 꽃이 피었습니다</h1>
+	<h1>수선화 꽃이 피었습니다</h1>
+	<h1>장미미 꽃이 피었습니다</h1>
+	<br>
+	<div id="res1"></div>
+</div>
+
+<div class="box box2">
+	<h2>&lt;h1 onclick="proc2(this)"></h2>
+	<h1 onclick="proc2(this)">무궁화 꽃이 피었습니다</h1>
+	<h1 onclick="proc2(this)">능소화 꽃이 피었습니다</h1>
+	<h1 onclick="proc2(this)">진달래 꽃이 피었습니다</h1>
+	<h1 onclick="proc2(this)">라일라 꽃이 피었습니다</h1>
+	<h1 onclick="proc2(this)">수선화 꽃이 피었습니다</h1>
+	<h1 onclick="proc2(this)">장미미 꽃이 피었습니다</h1>
+	<br>
+	<div id="res2"></div>
+</div>
+
+<div class="box box3">
+	<h2>스크립트에서 box3을 검색 - h1을 검색 -vbox3 = document.querySelector('.box3') <br>
+	이벤트 핸들러 설정 h1list[i].addEventListener('click', hclick)<br>
+	일괄등록 처리  function hclick(){this} /this로 해당 이벤트 객체를 받아서 처리한다(실행은 하나씩)
+	</h2>
+	<h1>피카츄 꽃이 피었습니다</h1>
+	<h1>라이츄 꽃이 피었습니다</h1>
+	<h1>파이리 꽃이 피었습니다</h1>
+	<h1>꼬부기 꽃이 피었습니다</h1>
+	<h1>버터풀 꽃이 피었습니다</h1>
+	<h1>잠만보 꽃이 피었습니다</h1>
+	<br>
+	<div id="res3"></div>
+</div>
+
+</body>
+</html>

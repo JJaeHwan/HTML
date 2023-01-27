@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$('#btn1').on('click', function() {
+		
+		$('li:first , li:last').css('background', 'yellow');
+		
+		$('li:eq(5)').css('background','red');
+		
+		$('li:lt(4)').css('font-size','1.5em').css('font-weight','bold');
+		
+	})
+	$('#btn2').on('click', function() {
+		
+		
+		$('tr:even').css('background', 'blue');
+		
+		$('tr:odd').css('background', 'red');
+		
+		$('tr:first').css('background','black').css('color','white');
+	})
+	
+})
+
+</script>
+<style type="text/css">
+  table{
+  	border : 2px solid blue;
+  }
+  td{
+  	width: 300px;
+  	height: 50px;
+  	text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+	:first<br>
+	:last<br>
+	:eq(5)<br>
+	:lt(4)<br>
+	<br><br>
+	<input type="button" value="확인" id="btn1">
+	<br>
+	
+	<div id="res1">
+	      <ul>
+         <li> one </li>
+         <li> two </li>
+         <li>  three </li>
+         <li> four </li>
+         <li> five </li>
+         <li> six</li>
+         <li> seven</li>
+         <li>eight</li>
+         <li>nine</li>
+      </ul>
+	
+	</div>
+</div>
+<div class="box">
+	tr:even<br>
+	tr:odd<br>
+	
+	<br>
+	<input type="button" value="확인" id="btn2">
+	<br>
+	
+	<div id="res2">
+		<table border="1">
+			<tr>
+				<td>One</td>
+				<td>1</td>
+				
+			</tr>
+			<tr>
+				<td>Two</td>
+				<td>2</td>
+				
+			</tr>
+			<tr>
+				<td>Three</td>
+				<td>3</td>
+				
+			</tr>
+			<tr>
+				<td>Four</td>
+				<td>4</td>
+				
+			</tr>
+			<tr>
+				<td>Five</td>
+				<td>5</td>
+				
+			</tr>
+			<tr>
+				<td>Six</td>
+				<td>6</td>
+				
+			</tr>
+			<tr>
+				<td>Seven</td>
+				<td>7</td>
+				
+			</tr>
+			<tr>
+				<td>Eight</td>
+				<td>8</td>
+				
+			</tr>
+			<tr>
+				<td>Nine</td>
+				<td>9</td>
+				
+			</tr>
+			<tr>
+				<td>Ten</td>
+				<td>10</td>
+				
+			</tr>
+		
+		</table>
+	</div>
+</div>
+</body>
+</html>

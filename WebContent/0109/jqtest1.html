@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+
+<script src="../js/jquery-3.6.3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+proc1 = () =>{
+	//id = res1인 요소를 검색
+// 	document.getElementById('res1').style.backgroundColor = 'blue';
+	
+	$('#res1').css('background-color', 'red');
+	
+}
+
+window.onload = function () {
+	
+// 	vbtn = document.getElementById('btn2');
+// 	vbtn.addEventListener('Click', function () { });
+	
+	
+	vbtn = $('#btn2');
+// 	vbtn.on('click', function () {})
+	$('#btn2').on('click', function() {
+		//id=res2를 검색 = 배경색을 변경
+		
+		$('#res2').css('background-color','pink');
+	})
+}
+
+
+</script>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+
+
+<div class="box">
+	<p>&lt;input type="button" value="확인" onclick="proc1()"></p>
+	<p>script 방식으로 버튼에 onclick이벤트를 설정</p>   
+	<input type="button" value="확인" onclick="proc1()">
+	<br>
+	<div id="res1"></div>
+</div>
+
+<div class="box">
+	<p>jquery 방식으로 이벤트 설정</p>
+	스크립트에서 id=btn2인 요소를 검색<br>
+	$('#btn2').on('click', function()  { }) <br>
+	<input type="button" value="확인" id="btn2">
+	<br>
+	<div id="res2"></div>
+</div>
+
+</body>
+</html>
