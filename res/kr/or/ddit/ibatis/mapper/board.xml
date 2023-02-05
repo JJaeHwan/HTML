@@ -15,7 +15,7 @@
        </isNotEmpty>
    </dynamic>
  </sql>
-	
+	<!-- 글 리스트 -->
 	<select id="selectByPage" resultClass="boardVo" parameterClass="map">
 	select A.* from 
      (select rownum as rnum , B.* from
@@ -27,19 +27,62 @@
        where A.rnum >= #start# 
      ]]>            
 	</select>
-	
+	<!-- 글 갯수 -->
 	<select id="totalCount" resultClass="int">
-			 select B.* from
-		    (select A.* from 
-		      (select count(*)from boardtab 
-		     <include refid="dynamicCondition"/>  
-		     order by num desc) A
-		<![CDATA[     
-		 where ROWNUM <= #end#) B
-		 where rownum >= #start#
-		 ]]> 
+			
+		select count(*)from boardtab 
+		<include refid="dynamicCondition"/>  
+	
 	</select>
-
+	
+	<!-- 글 문 수정  -->
+	<update id="modifyBoard" parameterClass="boardVo">
+		update boardtab set
+		
+			SUBJECT= #subject#,
+			mail= #mail#,
+			password = #password#,
+			CONTENT=#content#,
+			wip = #wip#,
+			WDATE= sysdate
+		where num = #num#
+	
+	</update>
+	
+	<!-- 글 삭제 -->
+	<delete id="deleteBoard" parameterClass="int">
+		delete from boardtab where num=#data#
+	
+	</delete>
+	<!-- 조회수 증가 -->
+	<update id="updateHit" parameterClass="int">
+		update boardtab
+		set hit = #hit# + 1
+		where num = #data#
+	</update>
+	
+	<!-- 글 등록 -->
+	<insert id="insertBoard" parameterClass="BoardVO">
+       INSERT INTO BOARDTAB VALUES(
+       BOARDTAB_NUM_SEQ.NEXTVAL,
+      #subject#,
+      #writer#,
+      #mail#,
+      #password#,
+      #content#,
+      0,
+      #wip#,
+      SYSDATE
+       )
+       <selectKey keyProperty="num" resultClass="int">
+          SELECT BOARDTAB_NUM_SEQ.CURRVAL FROM DUAL
+       </selectKey>
+	
+	</insert>
+	
+	
+	
+	
 </sqlMap>	
 	
 	
